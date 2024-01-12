@@ -5,7 +5,7 @@ int fibo(int);
 int main()
 {
 	cout << "Please enter a positive integer number : ";
-	int n, small = 1, smaller = 1;
+	int n;
 	cin >> n;
 	cout << n << "th number in the fibo sequence is: " << fibo(n);
 };
