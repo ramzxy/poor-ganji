@@ -1,25 +1,19 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
-bool LinearSearch(int A[], int, int);
 int main()
 {
-	int A[5], Num;
-	cout << "Enter 5 integer numbers : ";
-	for (int i = 0; i < 5; i++)
-		cin << A[i];
-	cout << "Now enter the number you would like to search for : ";
-	cin >> Num;
-	if (LinearSearch(A, 5, Num))
-		cout << "Given number was found.";
-	else
-		cout << "Given number was not found.";
-}
+	cout << "Enter the Nth exp you would like to know : ";
+	double final = 0, exp = 1, pow, fac = 1;
+	cin >> pow;
+	for (int i = 1; i < pow; i++)
+	{
+		final += exp / fac;
+		fac *= i;
+		exp *= pow;
+	};
 
-bool LinearSearch(int A[], int n, int Num)
-{
-	for (int i = 0; i < n; i++)
-		if (Num == A[i])
-			return true;
-		else return false;
+	cout << setprecision(50) <<"exp to the power of " << pow << " is " << final;
+	return 0;
 }
